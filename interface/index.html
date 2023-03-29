@@ -1,85 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>...</title>
-    
-    <link rel="stylesheet" href="css/style.css"/>
-
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-    <!--
-    <py-env>
-        - numpy
-        - matplotlib
-        - paths
-            - /data.py
-    </py-env>
-    -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>home - film viability evaluator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="mySlides">
-          <div class="numbertext">1 / 6</div>
-          <img src="img/butimacheerleader.jpg" style="width:100%">
-        </div>
-      
-        <div class="mySlides">
-          <div class="numbertext">2 / 6</div>
-          <img src="img/frankenstein.jpg" style="width:100%">
-        </div>
-      
-        <div class="mySlides">
-          <div class="numbertext">3 / 6</div>
-          <img src="img/lalaland.jpg" style="width:100%">
-        </div>
-          
-        <div class="mySlides">
-          <div class="numbertext">4 / 6</div>
-          <img src="img/leonorwillneverdie.jpg" style="width:100%">
-        </div>
-      
-        <div class="mySlides">
-          <div class="numbertext">5 / 6</div>
-          <img src="img/nightsofcabiria.jpg" style="width:100%">
-        </div>
-          
-        <div class="mySlides">
-          <div class="numbertext">6 / 6</div>
-          <img src="img/therockyhorrorpictureshow.jpg" style="width:100%">
-        </div>
-          
-        <a class="prev" onclick="plusSlides(-1)">❮</a>
-        <a class="next" onclick="plusSlides(1)">❯</a>
-      
-        <div class="caption-container">
-          <p id="caption"></p>
-        </div>
-      
-        <div class="row">
-          <div class="column">
-            <img class="demo cursor" src="img/placeholder.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="img/placeholder.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="img/placeholder.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="img/placeholder.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-          </div>
-          <div class="column">
-            <img class="demo cursor" src="img/placeholder.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-          </div>    
-          <div class="column">
-            <img class="demo cursor" src="img/placeholder.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-          </div>
-        </div>
-      </div>
-    <script src="js/script.js"></script>
-    <!--<py-script> print('Now you can!') </py-script>-->
-</body>    
+	<div class="container-fluid">
+		<!--nav bar-->
+		<header class="header">
+			<div class="header_in">
+				<button type="button" class="toggle tog" id="toggle">
+					<span></span>
+				</button>
+			</div>
+		</header>
+
+		<!--carousel-->
+		<div id="demo" class="carousel slide car" data-ride="carousel">
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0" class="active"></li>
+				<li data-target="#demo" data-slide-to="1"></li>
+				<li data-target="#demo" data-slide-to="2"></li>
+				<li data-target="#demo" data-slide-to="3"></li>
+				<li data-target="#demo" data-slide-to="4"></li>
+			</ul>
+
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="img/frankenstein.jpg" alt="Image 1">
+				</div>
+				<div class="carousel-item">
+					<img src="img/leonorwillneverdie.jpg" alt="Image 2">
+				</div>
+				<div class="carousel-item">
+					<img src="img/lalaland.jpg" alt="Image 3">
+				</div>
+				<div class="carousel-item">
+					<img src="img/butimacheerleader.jpg" alt="Image 4">
+				</div>
+				<div class="carousel-item">
+					<img src="img/nightsofcabiria.jpg" alt="Image 5">
+				</div>
+			</div>
+
+			<a class="carousel-control-prev arrow" href="#demo" data-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</a>
+
+			<a class="carousel-control-next arrow" href="#demo" data-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+
+		<!--under carousel-->
+		<div class="carousel-preview mt-3">
+			<img src="img/frankenstein.jpg" alt="Image 1" data-target="#demo" data-slide-to="0" class="active">
+			<img src="img/leonorwillneverdie.jpg" alt="Image 2" data-target="#demo" data-slide-to="1">
+			<img src="img/lalaland.jpg" alt="Image 3" data-target="#demo" data-slide-to="2">
+			<img src="img/butimacheerleader.jpg" alt="Image 4" data-target="#demo" data-slide-to="3">
+			<img src="img/nightsofcabiria.jpg" alt="Image 5" data-target="#demo" data-slide-to="4">
+		</div>
+
+		<!--tool button-->
+		<div class="text-center mt-3">
+			<button class="btn btn-primary btn-rounded"><a href="tool.html">Film Success Tool</a></button>
+		</div>
+
+		<!--sidebar-->
+		<div class="sidebar" id='sidebar'>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="data.html">Data</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+			<button class="btn btn-primary btn-rounded tool"><a href="tool.html">Film Success Tool</a></button>
+		</div>
+	</div>
+
+	<script>
+		var btn = document.querySelector('.toggle');
+		var btnst = true;
+
+		btn.onclick = function() {
+			if(btnst == true) {
+				document.querySelector('.toggle span').classList.add('toggle');
+				document.getElementById('sidebar').classList.add('sidebarshow');
+				btnst = false;
+			} else if(btnst == false) {
+				document.querySelector('.toggle span').classList.remove('toggle');
+				document.getElementById('sidebar').classList.remove('sidebarshow');
+				btnst = true;
+			}
+		}
+	</script>
+</body>
 </html>
