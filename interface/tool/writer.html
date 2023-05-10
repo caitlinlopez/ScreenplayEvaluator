@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>writer - film viability evaluator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="../js/script.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<!--nav bar-->
+		<header class="header">
+			<div class="header_in">
+				<button type="button" class="toggle tog" id="toggle">
+					<span></span>
+				</button>
+			</div>
+		</header>
+
+        <!--results-->
+        <br>
+        <br>
+        <br>
+
+        <h1 style="text-align: center;">writer's tool</h1>
+
+        <div class="filter filter-basic">
+            <div class="filter-nav">
+            <button class="btn btn-success active filter-button" data-filter="">All</button>
+            <button class="btn btn-primary filter-button" data-filter="runtime">Runtime</button>
+            <button class="btn btn-primary filter-button" data-filter="genre">Genre</button>
+            <button class="btn btn-primary filter-button" data-filter="language">Language</button>
+            <button class="btn btn-primary filter-button" data-filter="color">Color</button>
+            </div>
+            <div class="filter-gallery">
+            <div class="row">
+                <div class="col-md-12 my-1">
+                <div class="" data-category="runtime">
+                    <div class="item-content">
+                    <br>
+                    <h3>Runtime</h3>
+                    <img src="../img/runtime.png" alt="image" class="img-fluid">
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-12 my-1">
+                <div class="" data-category="genre">
+                    <div class="item-content">
+                        <br>
+                        <h3>Genre</h3>
+                        <img src="../img/genre.png" alt="image" class="img-fluid">
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-12 my-1">
+                <div class="" data-category="language">
+                    <div class="item-content">
+                        <br>
+                        <h3>Language</h3>
+                        <img src="../img/language.png" alt="image" class="img-fluid">
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-12 my-1">
+                <div class="" data-category="color">
+                    <div class="item-content">
+                        <br>
+                        <h3>Color</h3>
+                        <img src="../img/color.png" alt="image" class="img-fluid">
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <br>
+        
+		<!--sidebar-->
+		<div class="sidebar" id='sidebar'>
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="../about.html">About</a></li>
+				<li><a href="../data.html">Data</a></li>
+				<li><a href="../faq.html">FAQ</a></li>
+				<li><a href="../contact.html">Contact</a></li>
+			</ul>
+			<button class="btn btn-primary btn-rounded tool"><a href="../tool.html">Film Success Tool</a></button>
+		</div>
+	</div>
+
+	<footer class="bg-light py-4">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center text-md-start">
+			  <p class="mb-0">&copy; 2023 Caitlin Lopez & Kulsoom Sabit</p>
+			</div>
+		  </div>
+		</div>
+	</footer>	  
+
+	<script>
+		var btn = document.querySelector('.toggle');
+		var btnst = true;
+
+		btn.onclick = function() {
+			if(btnst == true) {
+				document.querySelector('.toggle span').classList.add('toggle');
+				document.getElementById('sidebar').classList.add('sidebarshow');
+				btnst = false;
+			} else if(btnst == false) {
+				document.querySelector('.toggle span').classList.remove('toggle');
+				document.getElementById('sidebar').classList.remove('sidebarshow');
+				btnst = true;
+			}
+		}
+
+        $('.filter-button').on('click', (e) => {
+        const filter = $(e.target).attr('data-filter');
+        console.log(filter);
+            const items = $('.item-content').parent();
+        for (item of items) {
+            if (filter == '') {
+            
+                $(item).addClass('animated zoomIn faster');
+            $(item).parent().addClass('animated zoomIn faster');
+            $(item).removeClass('d-none');
+            $(item).parent().removeClass('d-none');
+            
+            
+            console.log('x');
+            }else if ($(item).attr('data-category') == filter) {
+            $(item).addClass('animated zoomIn faster');
+            $(item).parent().addClass('animated zoomIn faster');
+            $(item).removeClass('d-none');
+            $(item).parent().removeClass('d-none');
+            } else {
+            $(item).addClass('d-none');
+            $(item).parent().addClass('d-none');
+            $(item).removeClass('animated zoomIn faster');
+            $(item).parent().removeClass('animated zoomIn faster');
+            }
+        }
+        });
+	</script>
+</body>
+</html>
