@@ -176,3 +176,12 @@ a {
     background-position: center center;
     background-attachment: fixed;
 }
+
+/**individual film page**/
+
+.filmheader {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}

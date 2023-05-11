@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>writer - film viability evaluator</title>
+	<title>producer - film viability evaluator</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="../css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -27,31 +27,51 @@
         <br>
         <br>
 
-        <h1 style="text-align: center;">writer's tool</h1>
+        <h1 style="text-align: center;">producer's tool</h1>
 
         <div class="filter filter-basic">
             <div class="filter-nav">
             <button class="btn btn-success active filter-button" data-filter="">All</button>
-            <button class="btn btn-primary filter-button" data-filter="runtime">Runtime</button>
+            <button class="btn btn-primary filter-button" data-filter="revenue">Box Office Revenue</button>
+            <button class="btn btn-primary filter-button" data-filter="budget">Production Budget</button>
+            <button class="btn btn-primary filter-button" data-filter="year">Release Year</button>
             <button class="btn btn-primary filter-button" data-filter="genre">Genre</button>
+            <button class="btn btn-primary filter-button" data-filter="face">Number of Faces in Poster</button>
             <button class="btn btn-primary filter-button" data-filter="language">Language</button>
-            <button class="btn btn-primary filter-button" data-filter="color">Color</button>
             <button class="btn btn-primary filter-button" data-filter="title">Title</button>
             <button class="btn btn-primary filter-button" data-filter="country">Country</button>
-            <button class="btn btn-primary filter-button" data-filter="plot">Plot Keywords</button>
             <button class="btn btn-primary filter-button" data-filter="rating">Content Rating</button>
+            <button class="btn btn-primary filter-button" data-filter="ratio">Aspect Ratio</button>
             </div>
             <div class="filter-gallery">
             <div class="row">
                 <div class="col-md-12 my-1">
-                <div class="" data-category="runtime">
+                <div class="" data-category="revenue">
                     <div class="item-content">
                     <br>
-                    <h3>Runtime</h3>
-                    <img src="../img/runtime.png" alt="image" class="img-fluid">
+                    <h3>Box Office Revenue</h3>
+                    <img src="../img/revenue.png" alt="image" class="img-fluid">
                     </div>
                 </div>
                 </div>
+                <div class="col-md-12 my-1">
+                    <div class="" data-category="budget">
+                        <div class="item-content">
+                        <br>
+                        <h3>Production Budget</h3>
+                        <img src="../img/budget.png" alt="image" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 my-1">
+                        <div class="" data-category="year">
+                            <div class="item-content">
+                            <br>
+                            <h3>Release Year</h3>
+                            <img src="../img/year.png" alt="image" class="img-fluid">
+                            </div>
+                        </div>
+                        </div>
                 <div class="col-md-12 my-1">
                 <div class="" data-category="genre">
                     <div class="item-content">
@@ -62,20 +82,20 @@
                 </div>
                 </div>
                 <div class="col-md-12 my-1">
+                <div class="" data-category="face">
+                    <div class="item-content">
+                        <br>
+                        <h3>Number of Faces in Poster</h3>
+                        <img src="../img/face.png" alt="image" class="img-fluid">
+                    </div>
+                </div>
+                </div>
+                <div class="col-md-12 my-1">
                 <div class="" data-category="language">
                     <div class="item-content">
                         <br>
                         <h3>Language</h3>
                         <img src="../img/language.png" alt="image" class="img-fluid">
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-12 my-1">
-                <div class="" data-category="color">
-                    <div class="item-content">
-                        <br>
-                        <h3>Color</h3>
-                        <img src="../img/color.png" alt="image" class="img-fluid">
                     </div>
                 </div>
                 </div>
@@ -98,15 +118,6 @@
                 </div>
                 </div>
                 <div class="col-md-12 my-1">
-                <div class="" data-category="plot">
-                    <div class="item-content">
-                        <br>
-                        <h3>Plot Keywords</h3>
-                        <img src="../img/plot.png" alt="image" class="img-fluid">
-                    </div>
-                </div>
-                </div>
-                <div class="col-md-12 my-1">
                 <div class="" data-category="rating">
                     <div class="item-content">
                         <br>
@@ -114,6 +125,15 @@
                         <img src="../img/rating.png" alt="image" class="img-fluid">
                     </div>
                 </div>
+                </div>
+                <div class="col-md-12 my-1">
+                    <div class="" data-category="ratio">
+                        <div class="item-content">
+                            <br>
+                            <h3>Aspect Ratio</h3>
+                            <img src="../img/ratio.png" alt="image" class="img-fluid">
+                        </div>
+                    </div>
                 </div>
             </div>
             </div>
