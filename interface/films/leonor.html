@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>leonor will never die - film viability evaluator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="../js/script.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<!--nav bar-->
+		<header class="header">
+			<div class="header_in">
+				<button type="button" class="toggle tog" id="toggle">
+					<span></span>
+				</button>
+			</div>
+		</header>
+
+        <!--pictures-->
+		<br>
+		<br>
+        <div class="row">
+            <img src="../img/leonor_header.png" alt="Image 1" class="filmheader">
+        </div>
+
+		<div class="row">
+			<h3 class="ml-3 mt-3 mb-3 font-italic">Leonor Will Never Die</h3>
+		</div>
+
+		<div class="list-group">
+			<p class="list-group-item"><b>Year:</b> 2022</p>
+			<p class="list-group-item"><b>Runtime:</b> 99 min</p>
+			<p class="list-group-item"><b>Genres:</b> Comedy, Drama, Action</p>
+			<p class="list-group-item"><b>Production Budget:</b> unknown</p>
+			<p class="list-group-item"><b>Box Office Revenue:</b> $32,950</p>
+			<p class="list-group-item"><b>Content Rating:</b> Unrated</p>
+			<p class="list-group-item"><b>Country:</b> Philippines</p>
+			<p class="list-group-item"><b>Language:</b> Tagalog, English</p>
+			<p class="list-group-item"><b>Number of Faces in Poster:</b> 1</p>
+			<p class="list-group-item"><b>Color:</b> Color</p>
+		  </div>		  
+
+		<!--sidebar-->
+		<div class="sidebar" id='sidebar'>
+			<ul>
+				<li><a href="../index.html">Home</a></li>
+				<li><a href="../about.html">About</a></li>
+				<li><a href="../data.html">Data</a></li>
+				<li><a href="../faq.html">FAQ</a></li>
+				<li><a href="../contact.html">Contact</a></li>
+			</ul>
+			<button class="btn btn-primary btn-rounded tool"><a href="../tool.html">Film Success Tool</a></button>
+		</div>
+	</div>
+
+	<footer class="bg-light py-4">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center text-md-start">
+			  <p class="mb-0">&copy; 2023 Caitlin Lopez & Kulsoom Sabit</p>
+			</div>
+		  </div>
+		</div>
+	</footer>	  
+
+	<script>
+		var btn = document.querySelector('.toggle');
+		var btnst = true;
+
+		btn.onclick = function() {
+			if(btnst == true) {
+				document.querySelector('.toggle span').classList.add('toggle');
+				document.getElementById('sidebar').classList.add('sidebarshow');
+				btnst = false;
+			} else if(btnst == false) {
+				document.querySelector('.toggle span').classList.remove('toggle');
+				document.getElementById('sidebar').classList.remove('sidebarshow');
+				btnst = true;
+			}
+		}
+	</script>
+</body>
+</html>
